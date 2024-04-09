@@ -1,0 +1,11 @@
+<h1>Articles</h1>
+<ul>
+  {% for article in object_list %}
+  <li>
+    <img src="{{article.image}}" width="256">
+    <a href="{{ article.get_absolute_url }}">{{ article.title }}</a>
+    <br>
+    <a href="{{ article.get_absolute_url }}">{{article.description}}</a>
+  </li>
+  {% endfor %}
+</ul>
